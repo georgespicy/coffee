@@ -42,7 +42,14 @@
       <div class="menu-list text-center mt-5">
         <ul class="nav nav-tabs text-center" style="display: block">
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#home">lattle</a>
+            {% comment %} <a class="nav-link" data-bs-toggle="tab" href="#cold_brew">Cold Brew</a>
+            <a class="nav-link" data-bs-toggle="tab" href="#Strawberry_latte">Strawberry Latte</a>
+            <a class="nav-link" data-bs-toggle="tab" href="#mantanchino">Mantanchino</a>
+            <a class="nav-link" data-bs-toggle="tab" href="#latte_art">Latte Art</a>
+            <a class="nav-link" data-bs-toggle="tab" href="#french_press">French Press</a> {% endcomment %}
+            {% for menu_category in menu %}
+            <a class="nav-link" data-bs-toggle="tab" href="#{{menu_category.menu_category|cut:" "}}">{{menu_category.menu_category}}</a>
+            {% endfor %}
           </li>
         </ul>
         <br />
@@ -66,34 +73,20 @@
     </div>
     <div class="col-8 mx-auto">
       <div class="tab-content">
-        <div class="tab-pane" id="home">
+        {% for coffees in coffee %}
+        <div class="tab-pane" id="{{coffees.menu_category|cut:" "}}">
           <div class="row">
             <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-12">
-              <div class="menu-pt">
-                <p class="menu-pt1">lattle art</p>
-                <p class="menu-pt2">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit mi sed
-                  suspendisse, aenean ligula id lobortis tempus congue nascetur
-                  erat penatibus.
-                </p>
-                <div class="coffee-img"></div>
+              <div class="menu-pt active">
+                <p class="menu-pt1">{{coffees.menu_name}}</p>
+                <p class="menu-pt2">{{coffees.menu_discription|truncatechars:350}}</p>
+                <div class="coffee-img" style="background-image: url('{{coffees.menu_photo.url}}');"></div>
               </div>
             </div>
           </div>
-          <!-- read more -->
-          <br />
-          <div class="row">
-            <div class="col-12 text-end">
-              <a
-                href="#"
-                style="text-decoration: none; font-size: 15px; color: #f59843"
-                >See more</a
-              >
-            </div>
-          </div>
-          <!-- read more -->
           <br />
         </div>
+        {% endfor %}
       </div>
     </div>
   </div>

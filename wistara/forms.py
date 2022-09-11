@@ -9,3 +9,9 @@ class SubcribeForm(forms.ModelForm):
     class Meta():
         model = Subcribe
         fields = ('email',)
+
+# class ReservationForm(forms.ModelForm):
+
+#     class Meta():
+#         model = Reservation
+#         fields = ('name', 'phone_number', 'sit', 'table_package')

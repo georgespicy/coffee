@@ -1,5 +1,5 @@
 from django.contrib import admin
-from wistara.models import Subcribe, Menu_Category, Menu
+from wistara.models import Subcribe, Menu_Category, Menu, Review
 
 # Register your models here.
 
@@ -14,3 +14,10 @@ class Menu_CategoryAdmin(admin.ModelAdmin):
 @admin.register(Menu)
 class MenuAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(Review)
+class ReviewAdmin(admin.ModelAdmin):
+    pass
+# @admin.register(Reservation)
+# class ReservationAdmin(admin.ModelAdmin):
+#     pass

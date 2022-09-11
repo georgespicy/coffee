@@ -126,7 +126,7 @@
 .coffee-img{
     height: 350px;
     width: 100%;
-    background-image: url(../image/coffee1.jpg);
+    /* background-image: url(../image/coffee1.jpg); */
     background-position: center;
     background-size: cover;
     border: #F59843 5px solid;

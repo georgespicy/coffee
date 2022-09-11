@@ -1,0 +1,52 @@
+{% extends 'base.html' %} {% load static %} {% block main %}
+<link rel="stylesheet" href="{% static 'css/reservation.css' %}">
+<form action="" method="POST">
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-12 text-center">
+                <p style="font-size: 25px; font-family: poppins; color: #F5963A; font-weight: 500; letter-spacing: 1px;">Reservation</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5 mb-3 mx-auto">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="register_input">
+                        <label for="name">Enter your name</label>
+                        {{reservation.name}}
+                    </div>
+                    <div class="register_input">
+                        <label for="phone_number">Enter your phone number</label>
+                        {{reservation.phone_number}}
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="option">
+                                <label for="sit">Number of sit</label>
+                                {{reservation.sit}}
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="option">
+                                <label for="table_package">Table package</label>
+                                {{reservation.table_package}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 mx-auto">
+                            <div class="register_button mx-auto mt-3">
+                                <input type="submit" value="Make a reservation">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
