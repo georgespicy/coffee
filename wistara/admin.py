@@ -1,8 +1,16 @@
 from django.contrib import admin
-from wistara.models import Subcribe
+from wistara.models import Subcribe, Menu_Category, Menu
 
 # Register your models here.
 
 @admin.register(Subcribe)
 class SubcribeAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Menu_Category)
+class Menu_CategoryAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Menu)
+class MenuAdmin(admin.ModelAdmin):
     pass
