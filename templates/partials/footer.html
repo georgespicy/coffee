@@ -1,0 +1,95 @@
+<div class="footer-container">
+  <div class="container pt-5" style="border-bottom: 1px solid #848484;">
+    <div class="row pt-5">
+      <div class="col-xxl-4 col-lg-4 col-md-6 col-sm-12">
+        <div class="footer-1">
+          <a href="#" class="footer-logo">WISTARA</a>
+          <p class="footer-discription py-4">
+            Wistara is a hangout place that is suitable for families and young
+            people, because it has a cozy place.
+          </p>
+        </div>
+      </div>
+      <div class="col-xxl-4 col-lg-4 col-md-6 col-sm-12">
+        <div class="row">
+          <div class="col-6">
+            <p
+              class="text-center"
+              style="color: #e9ecef; font-size: 23px; font-family: poppins"
+            >
+              Page
+            </p>
+            <div class="row">
+              <div class="col-8 mx-auto text-start">
+                <ul>
+                  <li class="footer-discription">Home</li>
+                  <br />
+                  <li class="footer-discription">Menu</li>
+                  <br />
+                  <li class="footer-discription">About Us</li>
+                  <br />
+                  <li class="footer-discription">Facility</li>
+                  <br />
+                  <li class="footer-discription">Review</li>
+                  <br />
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <p
+              class="text-center"
+              style="color: #e9ecef; font-size: 23px; font-family: poppins"
+            >
+              Our service
+            </p>
+            <div class="row">
+              <div class="col-10 mx-auto text-start">
+                <ul>
+                  <li class="footer-discription">Help center</li>
+                  <br />
+                  <li class="footer-discription">FAQ</li>
+                  <br />
+                  <li class="footer-discription">Transaction</li>
+                  <br />
+                  <li class="footer-discription">Delivery</li>
+                  <br />
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-4 col-lg-4 col-md-6 col-sm-12">
+        <form action="" method="POST" class="mt-5">
+          {% csrf_token %}
+          <div
+            style="
+              display: flex;
+              width: 90%;
+              height: auto;
+              margin: auto;
+              background-color: #f3f3f3;
+              border-radius: 5px;
+            "
+          >
+            <div class="input-box">
+              {% comment %} <input
+              type="email"
+              placeholder="Your email here"
+              name="subcribe"
+              /> {% endcomment %}
+              {% comment %} {{form.as_p}} {% endcomment %}
+              {{form}}
+            </div>
+            <div class="submit-button">
+              <input type="submit" value="Subcribe" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>

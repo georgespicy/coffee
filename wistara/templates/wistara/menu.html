@@ -1,0 +1,220 @@
+{% extends 'base.html' %} {% load static %} {% block main %}
+<link rel="stylesheet" href="{% static 'css/menu.css' %}">
+<div class="container-fluid" style="background-color: #121212">
+  <div class="row">
+    <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-12">
+      <div class="menu-mt1">
+        <p>Signature Menu</p>
+        <h1>Our Signature Menu</h1>
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
+    </div>
+    <!-- search -->
+    <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-12">
+      <div class="menu-search">
+        <form action="" method="POST">
+          <div style="display: flex">
+            <div class="search">
+              <input
+                type="text"
+                placeholder="input coffee type here"
+                name=""
+                id=""
+              />
+            </div>
+            <div class="button">
+              <input type="submit" value="Search" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- search -->
+  </div>
+</div>
+<!-- menu -->
+<div class="container-fluid" style="background-color: #121212">
+  <div class="row">
+    <div class="col-2">
+      <div class="menu-list text-center mt-5">
+        <ul class="nav nav-tabs text-center" style="display: block">
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#home">lattle</a>
+          </li>
+        </ul>
+        <br />
+        <br />
+        <a
+          href="#"
+          style="
+            font-size: 15px;
+            font-family: poppins;
+            font-weight: 400;
+            color: #737373;
+            text-decoration: none;
+          "
+          >See More</a
+        >
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
+    </div>
+    <div class="col-8 mx-auto">
+      <div class="tab-content">
+        <div class="tab-pane" id="home">
+          <div class="row">
+            <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-12">
+              <div class="menu-pt">
+                <p class="menu-pt1">lattle art</p>
+                <p class="menu-pt2">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit mi sed
+                  suspendisse, aenean ligula id lobortis tempus congue nascetur
+                  erat penatibus.
+                </p>
+                <div class="coffee-img"></div>
+              </div>
+            </div>
+          </div>
+          <!-- read more -->
+          <br />
+          <div class="row">
+            <div class="col-12 text-end">
+              <a
+                href="#"
+                style="text-decoration: none; font-size: 15px; color: #f59843"
+                >See more</a
+              >
+            </div>
+          </div>
+          <!-- read more -->
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- menu -->
+<!-- overview -->
+<div class="container mb-5">
+  <div class="row mx-auto">
+    <div class="col-xxl-6 col-lg-6 col-md-5 col-sm-6 mt-5">
+      <div class="overview-img"></div>
+    </div>
+    <div class="col-xxl-6 col-lg-6 col-md-7 col-sm-6 mt-5">
+      <div class="overview-words">
+        <p
+          style="
+            font-size: 19px;
+            font-family: poppins;
+            color: #f59843;
+            font-weight: 500;
+          "
+        >
+          Overview
+        </p>
+        <h1
+          style="
+            font-size: 50px;
+            color: #121212;
+            text-transform: capitalize;
+            font-family: poppins;
+          "
+        >
+          a little information for <br />
+          our guest
+        </h1>
+        <p
+          style="
+            font-size: 17px;
+            font-family: poppins;
+            color: #565758;
+            font-weight: 400;
+            margin-top: 50px;
+            letter-spacing: normal;
+          "
+        >
+          Here we attach brief data about our Wistara our Coffee Space that will
+          make it easier for your guests at our cafe to get to know us better.
+        </p>
+        <div class="row">
+          <div class="col-4">
+            <p
+              style="
+                font-size: 50px;
+                font-family: poppins;
+                font-weight: 600;
+                color: #121212;
+                margin: 0%;
+              "
+            >
+              15<span style="color: #ed8539">+</span>
+            </p>
+            <p
+              style="
+                font-size: 18px;
+                font-family: poppins;
+                font-weight: 600;
+                color: #6d737b;
+              "
+            >
+              Meeting Room
+            </p>
+          </div>
+          <div class="col-4">
+            <p
+              style="
+                font-size: 50px;
+                font-family: poppins;
+                font-weight: 600;
+                color: #121212;
+                margin: 0%;
+              "
+            >
+              100<span style="color: #ed8539">+</span>
+            </p>
+            <p
+              style="
+                font-size: 18px;
+                font-family: poppins;
+                font-weight: 600;
+                color: #6d737b;
+              "
+            >
+              Of all menus that
+            </p>
+          </div>
+          <div class="col-4">
+            <p
+              style="
+                font-size: 50px;
+                font-family: poppins;
+                font-weight: 600;
+                color: #121212;
+                margin: 0%;
+              "
+            >
+              15<span style="color: #ed8539">+</span>
+            </p>
+            <p
+              style="
+                font-size: 18px;
+                font-family: poppins;
+                font-weight: 600;
+                color: #6d737b;
+              "
+            >
+              Event Space
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- overview -->
+{% endblock %}

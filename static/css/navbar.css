@@ -1,0 +1,22 @@
+/* navbar */
+.navbar {
+  background-color: #121212;
+}
+
+.navbar-brand {
+  color: #e9ecef;
+  margin-left: 25px;
+}
+
+.navbar-nav {
+  font-size: 13px;
+  font-family: poppins;
+  font-weight: 400;
+  text-align: center;
+  margin: auto;
+}
+
+.nav-link {
+  color: #e9ecef;
+}
+/* navbar */

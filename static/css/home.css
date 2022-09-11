@@ -1,0 +1,131 @@
+/* landing page */
+
+.landing-page {
+  background-color: #121212;
+  height: 550px;
+  padding-top: 50px;
+}
+
+.landing-page-img {
+  width: 80%;
+}
+
+.landing-page-img img {
+  position: relative;
+}
+
+.landing-page-words {
+  width: 80%;
+  float: right;
+  justify-content: left;
+}
+
+.landing-page-img-inner-box {
+  height: 150px;
+  width: 150px;
+  float: right;
+  position: relative;
+  right: 150px;
+  bottom: 20px;
+  border: solid;
+  border-color: #925e2e;
+  border-width: 3px 3px 0px 0px;
+}
+
+.landing-page-logo {
+  color: #925e2e;
+  font-family: poppins;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.landing-page-words h1 {
+  font-family: poppins;
+  color: #e9ecef;
+}
+
+.landing-page-discription {
+  color: #e9ecef;
+  font-family: poppins;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+.landing-page-button {
+  text-decoration: none;
+  color: #1d1f38;
+  padding: 15px 40px 15px 40px;
+  background-color: #f59843;
+  margin: 30px 35px 0px 0px;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: poppins;
+}
+
+.landing-page-link {
+  text-decoration: none;
+  color: #e9ecef;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: poppins;
+}
+
+.landing-page-brands {
+  display: flex;
+  height: 175px;
+  /* background-color: #e9ecef; */
+}
+
+.landing-page-brand-1 {
+  height: 100%;
+  width: 25%;
+  background-image: url(../image/brand-1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.landing-page-brand-2 {
+  height: 100%;
+  width: 25%;
+  background-image: url(../image/brand-2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.landing-page-brand-3 {
+  height: 100%;
+  width: 25%;
+  background-image: url(../image/brand-3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.landing-page-brand-4 {
+  height: 100%;
+  width: 25%;
+  background-image: url(../image/brand-4.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* landing page */
+/* overview */
+.overview-img{
+    height: 500px;
+    width: 100%;
+    background-image: url(../image/overview-img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.overview-words{
+    height: 500px;
+    width: 100%;
+    padding-top: 45px;
+    padding-left: 20px;
+    /* background-color: #121212; */
+}
+/* overview */

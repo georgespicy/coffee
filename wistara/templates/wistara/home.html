@@ -1,0 +1,74 @@
+{% extends 'base.html' %} {% load static %} {% block main %} 
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+{% comment %} landing page {% endcomment %}
+  <div class="container-fluid">
+    <div class="row landing-page">
+      <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-6">
+        <div class="landing-page-words">
+          <p class="landing-page-logo">WISTARA</p>
+          <h1>Hangout experience with great atmosphere</h1>
+          <p class="landing-page-discription">
+            Boost your productivity and build your mood with a short <br />
+            break in the most confortable place
+          </p>
+          <p style="margin-top: 70px;"><a href="#" class="landing-page-button">Reservation</a></span><a href="{% url 'menu' %}" class="landing-page-link">See Our Menu ➚</a></span></p>
+        </div>
+      </div>
+      <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-6">
+        <div class="landing-page-img">
+          <div class="landing-page-img-inner-box"></div>
+          <img
+            src="{% static 'image/landing-page-img.jpg' %}"
+            class="img-fluid"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-6 landing-page-brands">
+          <div class="landing-page-brand-1"></div>
+          <div class="landing-page-brand-2"></div>
+          <div class="landing-page-brand-3"></div>
+          <div class="landing-page-brand-4"></div>
+      </div>
+    </div>
+  </div>
+{% comment %} landing page {% endcomment %}
+{% comment %} overview {% endcomment %}
+  <div class="container mb-5">
+    <div class="row mx-auto">
+      <div class="col-xxl-6 col-lg-6 col-md-5 col-sm-6 mt-5">
+        <div class="overview-img"></div>
+      </div>
+      <div class="col-xxl-6 col-lg-6 col-md-7 col-sm-6 mt-5">
+        <div class="overview-words">
+          <p style="font-size: 19px; font-family: poppins; color: #F59843; font-weight: 500;">Overview</p>
+          <h1 style="font-size: 50px; color: #121212; text-transform: capitalize; font-family: poppins;">a little information for <br> our guest</h1>
+          <p style="font-size: 17px; font-family: poppins; color: #565758; font-weight: 400; margin-top: 50px; letter-spacing: normal;">Here we attach brief data about our Wistara our Coffee Space that will make it easier for your guests at our cafe to get to know us better.</p>
+          <div class="row">
+            <div class="col-4">
+              <p style="font-size: 50px; font-family: poppins; font-weight: 600; color: #121212; margin: 0%;">15<span style="color: #ED8539;">+</span></p>
+              <p style="font-size: 18px; font-family: poppins; font-weight: 600; color: #6D737B;">Meeting Room</p>
+            </div>
+            <div class="col-4">
+              <p style="font-size: 50px; font-family: poppins; font-weight: 600; color: #121212; margin: 0%;">100<span style="color: #ED8539;">+</span></p>
+              <p style="font-size: 18px; font-family: poppins; font-weight: 600; color: #6D737B;">Of all menus that</p>
+            </div>
+            <div class="col-4">
+              <p style="font-size: 50px; font-family: poppins; font-weight: 600; color: #121212; margin: 0%;">15<span style="color: #ED8539;">+</span></p>
+              <p style="font-size: 18px; font-family: poppins; font-weight: 600; color: #6D737B;">Event Space</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% comment %} <form action="" method="POST">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button type="submit">sumbit</button>
+    </form> {% endcomment %}
+  </div>
+{% comment %} overview {% endcomment %}
+{% endblock %}
