@@ -1,6 +1,5 @@
 from django import forms
-from wistara.models import Subcribe
-
+from wistara.models import Reservation, Subcribe
 
 class SubcribeForm(forms.ModelForm):
     email = forms.EmailField(label='', widget=forms.EmailInput(
@@ -10,8 +9,9 @@ class SubcribeForm(forms.ModelForm):
         model = Subcribe
         fields = ('email',)
 
-# class ReservationForm(forms.ModelForm):
 
-#     class Meta():
-#         model = Reservation
-#         fields = ('name', 'phone_number', 'sit', 'table_package')
+class ReservationForm(forms.ModelForm):
+
+    class Meta():
+        model = Reservation
+        fields = ('full_name', 'phone_number', 'table_package', 'table_sit')

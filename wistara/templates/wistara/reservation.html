@@ -13,11 +13,11 @@
         </div>
         <div class="row">
             <div class="col-5 mb-3 mx-auto">
-                <form method="POST">
+                <form action="" method="POST">
                     {% csrf_token %}
                     <div class="register_input">
                         <label for="name">Enter your name</label>
-                        {{reservation.name}}
+                        {{reservation.full_name}}
                     </div>
                     <div class="register_input">
                         <label for="phone_number">Enter your phone number</label>
@@ -27,7 +27,7 @@
                         <div class="col-6">
                             <div class="option">
                                 <label for="sit">Number of sit</label>
-                                {{reservation.sit}}
+                                {{reservation.table_sit}}
                             </div>
                         </div>
                         <div class="col-6">

@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from wistara.forms import SubcribeForm
+from wistara.forms import ReservationForm, SubcribeForm
 from django.contrib.auth.decorators import login_required
 from wistara.models import Menu, Menu_Category
 # Create your views here.
@@ -79,17 +79,17 @@ def menu(request):
 
 @login_required
 def reservation(request):
-    form = SubcribeForm(request.POST)
+    reservation = ReservationForm(request.POST)
     if request.method == 'POST':
-        form = SubcribeForm(request.POST)
-        if form.is_valid():
-            form.save()
+        reservation = ReservationForm(request.POST)
+        if reservation.is_valid():
+            reservation.save()
             return redirect('home')
         else:
-            form = SubcribeForm()
+            reservation = ReservationForm()
     else:
-        form = SubcribeForm()
+        reservation = ReservationForm()
     context = {
-        'form':form
+        'reservation':reservation
     }
     return render(request, 'wistara/reservation.html', context)

@@ -32,23 +32,25 @@ class Review(models.Model):
         return self.customers_reviews
     
 
-# class Reservation(models.Model):
-#     phone_number = models.IntegerField()
-#     number_of_sit = (
-#         ('1', '1'), 
-#         ('2', '2'), 
-#         ('3', '3'), 
-#         ('4', '4'), 
-#         ('5', '5'), 
-#     )
-#     sit = models.IntegerField(choices=number_of_sit)
-#     name = models.CharField(max_length=50)
-#     package = (
-#         ('Primium', 'Primium'),
-#         ('classic', 'classic'),
-#         ('VVIP', 'VVIP'),
-#     )
-#     table_package = models.CharField(choices=package, max_length=10)
+class Reservation(models.Model):
+    full_name = models.CharField(max_length=50)
+    phone_number = models.CharField(max_length=15)
+    package = [
+        ('VVIP', 'VVIP'),
+        ('standard', 'standard'),
+        ('premium', 'premium')
+    ]
+    table_package = models.CharField(choices=package, max_length=10)
+    sit = [
+        ('1', '1'),
+        ('2', '2'),
+        ('3', '3'),
+        ('4', '4'),
+        ('5', '5'),
+        ('6', '6'),
+    ]
+    table_sit = models.CharField(choices=sit, max_length=10)
 
-#     def __str__(self):
-#         return self.name
+    def __str__(self):
+        return self.full_name
+    
