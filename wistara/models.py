@@ -17,7 +17,7 @@ class Menu_Category(models.Model):
     
     
 class Menu(models.Model):
-    menu_name = models.CharField(max_length=30)
+    menu_name = models.CharField(verbose_name='menu_name', max_length=30)
     menu_discription = models.TextField()
     menu_photo = models.ImageField(validators=[FileExtensionValidator(['jpg', 'jpeg'])], upload_to='menu_photo')
     menu_category = models.ForeignKey(Menu_Category, on_delete=models.CASCADE)
@@ -26,10 +26,12 @@ class Menu(models.Model):
         return self.menu_name
 
 class Review(models.Model):
-    customers_reviews = models.TextField()
+    customer_photo = models.ImageField(validators=[FileExtensionValidator(['jpg', 'jpeg'])], upload_to='customer_photo')
+    customer_name = models.CharField(max_length=50)
+    customer_review = models.TextField()
 
     def __str__(self):
-        return self.customers_reviews
+        return self.customer_name
     
 
 class Reservation(models.Model):

@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% load static %} {% block main %}
+<link rel="stylesheet" href="{% static 'css/menu.css' %}">
+<div class="row">
+    {% for menus in menu %}
+    <div class="col-xxl-4 col-lg-4 col-md-4 col-sm-6 mx-auto">
+      <div class="menu-pt active">
+        <p class="menu-pt1">{{menus.menu_name}}</p>
+        <p class="menu-pt2">{{menus.menu_discription|truncatechars:350}}</p>
+        <div class="coffee-img" style="background-image: url('{{menus.menu_photo.url}}');"></div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock %}
